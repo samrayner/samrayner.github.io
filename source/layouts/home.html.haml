@@ -1,0 +1,8 @@
+- wrap_layout :layout do
+  = yield
+
+  %section#blog
+    %h1 Latest Blog Post
+
+    .wrapper
+      = partial "shared/post", locals: { post: blog.articles.first }

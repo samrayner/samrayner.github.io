@@ -1,0 +1,45 @@
+article#scripts > h2 {
+	margin-top: 2em;
+}
+
+article#scripts > ul {
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+}
+
+article#scripts > ul li {
+	float: left;
+	margin-right: 1ex;
+}
+
+article#scripts > ul a {
+	box-shadow: inset 0px 20px 20px rgba(255,255,255,0.2);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 2px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+
+	display: block;
+	padding: 0.2em 0.5em;
+	float: left;
+	border-radius: 3px;
+	background-color: #365b88;
+	font-size: 1em;
+}
+
+article#scripts > ul a:hover,
+article#scripts > ul a:focus {
+	background-color: #476c99;
+}
+
+#scripts > ul a:active {
+	box-shadow: inset 0px 20px 20px rgba(0,0,0,0.1);
+	border-bottom-width: 1px;
+	border-top-width: 2px;
+
+	background-color: #365b88;
+}

@@ -1,0 +1,20 @@
+%head
+  %meta{ charset: "utf-8" }
+  %link{ rel: "dns-prefetch", href: "//ajax.googleapis.com" }
+  %meta{ name: "viewport", content: "width=device-width" }
+  %meta{ name: "apple-mobile-web-app-capable", content: "yes" }
+  %meta{ "http-equiv" => "X-UA-Compatible", content: "IE=edge,chrome=1" }
+  %meta{ name: "description", content: data.me.bio }
+  %title
+    = "#{current_page.data.title} -" if current_page.data.title
+    = data.site.title
+
+  %link{ href: "/feed.xml", rel: "alternate", title: data.site.title, type: "application/atom+xml" }
+
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Enriqueta:700,400", "application"
+
+  - if current_page.data.style
+    %link{ href: "style.css", rel: "stylesheet" }
+
+  - if current_page.data.slug == "home" && blog.articles.first.data.style
+    %link{ href: "#{blog.articles.first.url}style.css", rel: "stylesheet" }

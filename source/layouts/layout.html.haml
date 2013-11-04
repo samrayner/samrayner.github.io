@@ -1,0 +1,8 @@
+!!! 5
+%html{ lang: "en-gb" }
+  = partial "shared/head"
+  %body{ id: current_page.data.slug }
+    = partial "shared/header"
+    = partial "shared/banner"
+    = yield
+    = partial "shared/javascripts"
