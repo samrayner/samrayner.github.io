@@ -1,0 +1,26 @@
+%section#archive
+  %h1 Post Archive
+  .wrapper
+    - blog.articles.group_by { |a| a.date.year }.each do |year, year_posts|
+      .year-block
+        %h2= year
+        - year_posts.group_by { |a| a.date.month }.each do |month, month_posts|
+          .month-block
+            %h3= Date::MONTHNAMES[month]
+            - month_posts.group_by { |a| a.date.day }.each do |day, day_posts|
+              .day-block
+                - day_posts.each do |post|
+                  %article
+                    %h1= link_to post.title, post.url
+                    %footer
+                      %dl
+                        %dt Posted
+                        %dd.pubdate
+                          %time{ title: post.date, datetime: post.date.iso8601, pubdate: "pubdate" }
+                            = post.date.strftime("%d")
+                        - unless post.tags.empty?
+                          %dt Tagged
+                          %dd.tags
+                            %ul
+                              - post.tags.each do |tag|
+                                %li= link_to(tag, tag_path(tag))
