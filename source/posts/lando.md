@@ -4,7 +4,7 @@ date: 2012-08-30 12:59
 tags: project, development, web
 banner_image: banner.jpg
 banner_height: 250
-banner_color: #c7d5da
+banner_color: "#c7d5da"
 banner_link: http://landocms.com
 ---
 

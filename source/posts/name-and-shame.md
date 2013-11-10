@@ -4,7 +4,7 @@ date: 2013-01-26 10:04
 tags: project, ios, download
 banner_image: banner.jpg
 banner_height: 285
-banner_color: #f5ede0
+banner_color: "#f5ede0"
 banner_link: https://itunes.apple.com/app/name-and-shame/id591856426
 ---
 
