@@ -1,0 +1,22 @@
+---
+slug: posts-by-tag
+---
+
+#banner
+  %h1
+    Posts tagged:
+    = link_to(tagname, tag_path(tagname))
+
+%section#blog
+  - articles.each_with_index do |post, i|
+    - if i > 0
+      %hr
+
+    .wrapper
+      - if current_page.data.style
+        %style{ href: "#{post.url}style.css", rel: "stylesheet", scoped: "scoped" }
+      = partial "shared/post", locals: { post: post, short_sidebar: true }
+
+  - if articles.empty?
+    .wrapper
+      %p No posts found.

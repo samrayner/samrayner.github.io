@@ -21,17 +21,19 @@
             %li{ class: "#{"tagged" if post.tags.include?(tag)}" }
               = link_to(tag, tag_path(tag))
 
-      - if post.next_article
-        %dt.icon-after{ "data-icon" => "forward" } Next
-        %dd= link_to(post.next_article.title, post.next_article.url, rel: "next")
+      - unless defined?(short_sidebar)
+        - if post.next_article
+          %dt.icon-after{ "data-icon" => "forward" } Next
+          %dd= link_to(post.next_article.title, post.next_article.url, rel: "next")
 
-      - if post.previous_article
-        %dt{ "data-icon" => "back" } Previous
-        %dd= link_to(post.previous_article.title, post.previous_article.url, rel: "prev")
+        - if post.previous_article
+          %dt{ "data-icon" => "back" } Previous
+          %dd= link_to(post.previous_article.title, post.previous_article.url, rel: "prev")
 
-    .comments
-      %h1{ "data-icon" => "comment" } Comments?
-      %p
-        = mail_to(html_obfuscate(data.me.email), html_obfuscate(data.me.email), class: "email")
-        or tweet
-        = link_to("@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}")
+    - unless defined?(short_sidebar)
+      .comments
+        %h1{ "data-icon" => "comment" } Comments?
+        %p
+          = mail_to(html_obfuscate(data.me.email), html_obfuscate(data.me.email), class: "email")
+          or tweet
+          = link_to("@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}")

@@ -158,14 +158,10 @@ $(function() {
     });
 
     $("a[data-fancybox-group]").fancybox();
+
+    Chrome.init();
   }
 
   FluidVideos.init();
   $('pre code').each(function(i, e){ hljs.highlightBlock(e, '  ') });
-});
-
-$(window).load(function() {
-  if(Viewport.getWidth() === "wide") {
-    Chrome.init();
-  }
 });
