@@ -2,6 +2,9 @@
 title: "Shameless Self-Promotion"
 date: 2012-11-16 10:19
 tags: personal, marketing, web
+banner_image: banner.png
+banner_height: 230
+banner_color: #CA5934
 ---
 
 Last Saturday I travelled home to Birmingham to present at [Multipack Presents Show and Tell][mpst], a meetup of midlands-based geeks organised by [The Multipack][mp].

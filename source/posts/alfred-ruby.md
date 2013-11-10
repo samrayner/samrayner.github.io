@@ -2,6 +2,9 @@
 title: "Using Ruby 1.9 with Alfred"
 date: 2013-01-22 21:14
 tags: development, mac, tip, alfred
+banner_image: banner.jpg
+banner_height: 285
+banner_color: #7239b2
 ---
 
 I've been building a [Sprint.ly Workflow for Alfred 2][sfa] (currently [in beta][a2]) and wanted to use it as an opportunity to brush up on my [TDD][] and Ruby-foo.

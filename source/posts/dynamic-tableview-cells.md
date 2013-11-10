@@ -2,6 +2,9 @@
 title: "Dynamic Height UITableView Cells in Xcode"
 date: 2012-10-24 16:59
 tags: mac, ios, development
+banner_image: banner.jpg
+banner_height: 285
+banner_color: white
 ---
 
 I recently started building my first iOS app and quickly ran into problems trying to apply dynamic heights to `UITableView` cells depending on their content. This seems like the kind of common task that Apple would make simple through their APIs but after hours of research I discovered that:

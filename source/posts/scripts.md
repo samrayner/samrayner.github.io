@@ -3,6 +3,9 @@ title: "Handy Scripts"
 date: 2012-08-27 21:05
 tags: download, mac, productivity, alfred
 style: true
+banner_image: banner.jpg
+banner_height: 285
+banner_color: #365b88
 ---
 
 I have a bunch of Applescripts and shell scripts that live in [Alfred][a] and make my computing life a little easier. Here's a collection of the the ones I've written. Most of them are pretty niche but hopefully they'll prove useful to somebody.

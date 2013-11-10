@@ -1473,8 +1473,8 @@ window.flux = {
           left: this.options.direction == 'left' ? '0px' : -width+'px',
           'z-index': 101
         }).css3({
-          'transition-duration': '600ms',
-          'transition-timing-function': 'ease-in',
+          'transition-duration': '200ms',
+          'transition-timing-function': 'ease-in-out',
           'transition-property': 'all'
         });
 

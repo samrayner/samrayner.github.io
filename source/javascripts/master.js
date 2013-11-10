@@ -152,13 +152,12 @@ $(function() {
     //link images in the same gallery together
     $(".gallery a").each(function() {
       var offset = $(this).parent().offset();
-      var id = offset.top + offset.left;
-      $(this).attr("rel", "prettyPhoto[" + id + "]");
+      var group = offset.top + offset.left;
+      $(this).attr("data-fancybox-group", group);
+      window.console.log($(this).attr("data-fancybox-group"));
     });
 
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-      social_tools: ""
-    });
+    $("a[data-fancybox-group]").fancybox();
   }
 
   FluidVideos.init();

@@ -2,6 +2,10 @@
 title: "Introducing Lando"
 date: 2012-08-30 12:59
 tags: project, development, web
+banner_image: banner.jpg
+banner_height: 250
+banner_color: #c7d5da
+banner_link: http://landocms.com
 ---
 
 Managing the content of websites has always felt like a bit of a chore. Things like editing pages, posting blog entries and importing media should be simple but the Web-based admin interfaces of most CMSs make it fiddley. Form inputs and textareas weren't designed for authoring content and, while WYSIWYG editors help, I dread looking at the HTML produced.
