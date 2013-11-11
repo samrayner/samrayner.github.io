@@ -26,6 +26,7 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", :layout => false
+page "/rss/index.xml", :layout => false
 
 ###
 # Compass
