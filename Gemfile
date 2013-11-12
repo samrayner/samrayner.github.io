@@ -11,3 +11,5 @@ gem "builder", "~> 3.0"
 
 gem "therubyracer"
 gem "less"
+
+gem "rake"
