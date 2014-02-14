@@ -1,0 +1,32 @@
+article#github-spectacles #bookmarklet {
+  box-shadow: inset 0px 20px 20px rgba(255,255,255,0.2);
+  border: 1px solid rgba(0,0,0,0.3);
+  border-bottom-width: 2px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0.5em 0 1em;
+  width: 100%;
+  max-width: 300px;
+  background-color: #157282;
+  font-size: 1.2em;
+}
+
+article#github-spectacles #bookmarklet:hover,
+article#github-spectacles #bookmarklet:focus {
+  background-color: #268393;
+}
+
+article#github-spectacles #bookmarklet:active {
+  box-shadow: inset 0px 20px 20px rgba(0,0,0,0.1);
+  border-bottom-width: 1px;
+  border-top-width: 2px;
+
+  background-color: #157282;
+}
