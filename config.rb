@@ -35,6 +35,9 @@ page "/rss/index.xml", :layout => false
 set :haml, { format: :html5, attr_wrapper: '"' }
 set :less, { compress: true }
 
+set :markdown_engine, :kramdown
+set :markdown, { smartypants: true }
+
 # Susy grids in Compass
 # First: gem install susy
 # require 'susy'
