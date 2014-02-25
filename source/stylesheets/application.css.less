@@ -534,14 +534,19 @@ article {
 /* Media Queries
 ================================================== */
 
-body:after { display: none; }
+body:after {
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
 
-@media all and (max-width: 650px) {
+@media (max-width: 650px) {
   body:after { content: "thin"; }
   @import "thin.css.less";
 }
 
-@media all and (min-width: 651px) {
+@media (min-width: 651px) {
   body:after { content: "wide"; }
   @import "wide.css.less";
   @import "chrome.css.less";
