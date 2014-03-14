@@ -1,6 +1,5 @@
 class FluidVideos
-  constructor: ->
-  @init: (container="body", $videos=null) ->
+  @init: (container=null, $videos=null) ->
     $videos ||= $("iframe[src*='vimeo.com'], iframe[src*='youtube.com']")
 
     $videos.each ->
@@ -10,9 +9,10 @@ class FluidVideos
         .removeAttr('width')
 
     $(window).resize ->
-      newWidth = $(container).width()
       $videos.each ->
         $elm = $(this)
+        $parent = if container then $(container) else $elm.parent()
+        newWidth = $parent.width()
         $elm
           .width(newWidth)
           .height(newWidth * $elm.data('aspectRatio'))
@@ -20,7 +20,6 @@ class FluidVideos
     $(window).resize()
 
 class Viewport
-  constructor: ->
   @getWidth: ->
     size = window
             .getComputedStyle(document.body,':after')
@@ -136,7 +135,7 @@ $ ->
     chrome = new Chrome()
     chrome.init()
 
-  FluidVideos.init(".post")
+  FluidVideos.init()
 
   $('pre code').each (i, e) ->
     hljs.highlightBlock(e, '  ')
