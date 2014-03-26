@@ -1,10 +1,12 @@
 module ThemeHelpers
-  def html_obfuscate(string)
-    encoded_chars = []
-    string.each_char do |char|
-      encoded_chars << "&##{char[0].ord};"
+  def html_obfuscate(string, url=false)
+    if url
+      "%" + string.unpack("H2" * string.bytesize).join("%").upcase
+    else
+      encoded = []
+      string.each_char { |char| encoded << "&##{char[0].ord};" }
+      encoded.join
     end
-    encoded_chars.join
   end
 
   def banner_style(page)

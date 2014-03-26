@@ -34,6 +34,6 @@
       .comments
         %h1{ "data-icon" => "comment" } Comments?
         %p
-          = mail_to(html_obfuscate(data.me.email), html_obfuscate(data.me.email), class: "email")
+          = mail_to(html_obfuscate(data.me.email, true), html_obfuscate(data.me.email), class: "email")
           or tweet
           = link_to("@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}")
