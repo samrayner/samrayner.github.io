@@ -5,7 +5,7 @@ slug: posts-by-tag
 #banner
   %h1
     Posts tagged:
-    = link_to(tagname, tag_path(tagname))
+    = link_to tagname, tag_path(tagname)
 
 %section#blog
   - articles.each_with_index do |post, i|

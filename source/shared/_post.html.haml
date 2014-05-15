@@ -3,7 +3,7 @@
     - if current_article
       = post.title
     - else
-      = link_to(post.title, post.url)
+      = link_to post.title, post.url
   - #squiggle fixes whitespace in code blocks (similar to =)
   ~ post.body
 
@@ -19,21 +19,21 @@
         %ul.tags
           - blog.tags.keys.sort.each do |tag|
             %li{ class: "#{"tagged" if post.tags.include?(tag)}" }
-              = link_to(tag, tag_path(tag))
+              = link_to tag, tag_path(tag)
 
       - unless defined?(short_sidebar)
         - if post.next_article
           %dt.icon-after{ "data-icon" => "forward" } Next
-          %dd= link_to(post.next_article.title, post.next_article.url, rel: "next")
+          %dd= link_to post.next_article.title, post.next_article.url, rel: "next"
 
         - if post.previous_article
           %dt{ "data-icon" => "back" } Previous
-          %dd= link_to(post.previous_article.title, post.previous_article.url, rel: "prev")
+          %dd= link_to post.previous_article.title, post.previous_article.url, rel: "prev"
 
     - unless defined?(short_sidebar)
       .comments
         %h1{ "data-icon" => "comment" } Comments?
         %p
-          = mail_to(html_obfuscate(data.me.email, true), html_obfuscate(data.me.email), class: "email")
+          = mail_to percent_obfuscate(data.me.email), entity_obfuscate(data.me.email), class: "email"
           or tweet
-          = link_to("@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}")
+          = link_to "@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}"

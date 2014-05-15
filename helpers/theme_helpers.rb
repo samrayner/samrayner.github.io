@@ -1,12 +1,10 @@
 module ThemeHelpers
-  def html_obfuscate(string, url=false)
-    if url
-      "%" + string.unpack("H2" * string.bytesize).join("%").upcase
-    else
-      encoded = []
-      string.each_char { |char| encoded << "&##{char[0].ord};" }
-      encoded.join
-    end
+  def entity_obfuscate(string)
+    string.gsub(/./){ |char| "&##{char[0].ord};" }
+  end
+
+  def percent_obfuscate(string)
+    "%" + string.unpack("H2" * string.bytesize).join("%").upcase
   end
 
   def banner_style(page)
