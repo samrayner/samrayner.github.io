@@ -3,10 +3,3 @@
     %a#banner{ style: banner_style(current_page), href: link }
   - else
     #banner{ style: banner_style(current_page) }
-- elsif current_page.data.slug == "home"
-  %section#banner
-    %h1 Latest Projects
-    .wrapper
-      = window("name-and-shame", "http://nameandshameapp.com", "name-and-shame")
-      = window("lando", "http://landocms.com", "lando")
-      = window("terracoding", "http://www.terracoding.com", nil)
