@@ -14,5 +14,5 @@ I imagine this tip would work especially well if you're lucky enough to have a H
 
 [^1]: You can do something similar within Adobe applications via _Window > Arrange > New Window for X_ but zooming right out results in poor resampling and loss of detail.
 
-[prev]: /app/cache/files/Posts/icon-preview-tip/preview.jpg
+[prev]: /posts/icon-preview-tip/preview.jpg
 [is]: https://itunes.apple.com/us/app/iconsider-for-icon-deisigner/id415013162
