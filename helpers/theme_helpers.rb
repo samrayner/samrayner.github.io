@@ -52,7 +52,7 @@ module ThemeHelpers
     return image_collection(slug, :slideshow)
   end
 
-  def window(gallery_slug, url, post_slug)
+  def window(gallery_slug, url, post_slug=nil)
     url ||= data.site.root_url
     permalink = post_slug ? "/posts/#{post_slug}/" : url
 

@@ -22,9 +22,9 @@ The idea came from sitting with my flatmates discussing possible app ideas that 
 
 > "There's a town called Crematorium?" -- Joe Crellin (seeing a road sign on the way to Manchester)
 
-The app was developed with help from my mate [Sam Millner][sm] (who runs an NBA blog on [a rather sexy CMS][lando]). Thanks also to [Guy Brown][gb] for his top lectures on iOS and [Dom][] and [Rob][] for their feedback and advice.
+The app was developed with help from my mate Sam Millner. Thanks also to [Guy Brown][gb] for his top lectures on iOS and Dom and Rob for their feedback and advice.
 
-Please check it out [on the App Store][as] and take it for a spin! I'd love to know what you think via [email][] or Twitter: [@NameAndShameApp][tw].
+Please check it out [on the App Store][as] and take it for a spin! I'd love to know what you think via [email][] or Twitter: [@samrayner][tw].
 
 [as]: https://itunes.apple.com/app/name-and-shame/id591856426
 [sm]: http://nba-lockdown.com
@@ -33,4 +33,4 @@ Please check it out [on the App Store][as] and take it for a spin! I'd love to k
 [dom]: http://domness.me
 [rob]: http://tallguyrob.com
 [email]: mailto:&#115;&#97;&#109;&#64;&#110;&#97;&#109;&#101;&#97;&#110;&#100;&#115;&#104;&#97;&#109;&#101;&#97;&#112;&#112;&#46;&#99;&#111;&#109;
-[tw]: http://twitter.com/nameandshameapp
+[tw]: http://twitter.com/samrayner
