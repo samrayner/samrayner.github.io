@@ -1,6 +1,5 @@
-@import "mixins.css.less";
-@import "vars.css.less";
-@borderColor: #777;
+@import "vars", "mixins";
+$border-color: #777;
 
 .chrome {
 	min-width: 250px;
@@ -12,7 +11,7 @@
 	.toolbar,
 	.slideshow {
 		position: relative;
-		border: 1px solid @borderColor;
+		border: 1px solid $border-color;
 	}
 
 	.toolbar {
@@ -22,7 +21,7 @@
 		border-top-right-radius: 5px;
 		border-bottom: 0;
 		overflow: hidden;
-		.gradient(#b4b4b4, 0%, #eaeaea, 100%);
+		@include gradient(#b4b4b4, 0%, #eaeaea, 100%);
 		box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
 	}
 
@@ -41,7 +40,7 @@
 			text-decoration: none;
 			color: #666;
 			float: left;
-			.gradient(rgba(0, 0, 0, 0.25), 0%, rgba(0, 0, 0, 0.05), 100%);
+			@include gradient(rgba(0, 0, 0, 0.25), 0%, rgba(0, 0, 0, 0.05), 100%);
 
 			+ a {
 				border-left: 1px solid rgba(0,0,0,0.2);
@@ -56,7 +55,7 @@
 			&:active {
 				background-color: white;
 				box-shadow: inset 0px 1px 2px 0px rgba(0,0,0, 0.2);
-				.gradient(rgba(0, 0, 0, 0.15), 0%, rgba(0, 0, 0, 0.3), 100%);
+				@include gradient(rgba(0, 0, 0, 0.15), 0%, rgba(0, 0, 0, 0.3), 100%);
 			}
 		}
 
@@ -84,7 +83,7 @@
 
 	.address,
 	.button-group {
-		border: 1px solid @borderColor;
+		border: 1px solid $border-color;
 		border-radius: 3px;
 	}
 
@@ -149,7 +148,7 @@
 			bottom: 10px;
 			z-index: 999;
 
-			.transition(opacity, 0.2s, linear);
+			@include transition(opacity, 0.2s, linear);
 		}
 	}
 

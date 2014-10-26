@@ -9,7 +9,4 @@ gem "middleman-deploy"
 # For feed.xml.builder
 gem "builder", "~> 3.2.2"
 
-gem "therubyracer"
-gem "less"
-
 gem "rake"

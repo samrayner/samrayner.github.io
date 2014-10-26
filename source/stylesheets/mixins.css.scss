@@ -1,0 +1,61 @@
+@mixin gradient($start-color: #000, $stop1: 0%, $end-color: #fff, $stop2: 100%) {
+	background-image: -o-linear-gradient(			bottom, $start-color $stop1, $end-color $stop2);
+	background-image: -moz-linear-gradient(		bottom, $start-color $stop1, $end-color $stop2);
+	background-image: -webkit-linear-gradient(bottom, $start-color $stop1, $end-color $stop2);
+	background-image: linear-gradient(				to top, $start-color $stop1, $end-color $stop2);
+}
+
+@mixin linear-gradient($gradient) {
+	background-image: -o-linear-gradient($gradient);
+	background-image: -moz-linear-gradient($gradient);
+	background-image: -webkit-linear-gradient($gradient);
+	background-image: linear-gradient($gradient);
+}
+
+@mixin transition($property:all, $duration:0.2s, $ease:linear) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: 		$property $duration $ease;
+  -o-transition: 			$property $duration $ease;
+  transition: 				$property $duration $ease;
+}
+
+@mixin transform($string){
+	-webkit-transform: $string;
+	-moz-transform: 	 $string;
+	-ms-transform: 		 $string;
+	-o-transform: 		 $string;
+	transform: 		 		 $string;
+}
+
+@mixin animation($name, $duration:0.2s, $delay:0, $ease:ease, $count:1, $direction:normal, $fillMode:none) {
+	-webkit-animation: 	$name $duration $ease $delay;
+	-moz-animation:    	$name $duration $ease $delay;
+	-o-animation:     	$name $duration $ease $delay;
+	-ms-animation:     	$name $duration $ease $delay;
+	animation:     			$name $duration $ease $delay;
+
+	-webkit-animation-fill-mode: $fillMode;
+	-moz-animation-fill-mode: $fillMode;
+	-ms-animation-fill-mode: $fillMode;
+	-o-animation-fill-mode: $fillMode;
+	animation-fill-mode: $fillMode;
+}
+
+@mixin animation-delay($delay:1s) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin zoomin() {
+	from {
+		opacity: 0;
+		@include transform(scale(0));
+	}
+	to {
+		opacity: 1;
+		@include transform(scale(1));
+	}
+}

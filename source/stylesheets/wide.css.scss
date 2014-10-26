@@ -1,14 +1,13 @@
-@import "mixins.css.less";
-@import "vars.css.less";
+@import "vars", "mixins";
 
 /* Animation
 ================================================== */
 
-@-webkit-keyframes zoomin {.zoomin();}
-@-moz-keyframes zoomin {.zoomin();}
-@-ms-keyframes zoomin {.zoomin();}
-@-o-keyframes zoomin {.zoomin();}
-@keyframes zoomin {.zoomin();}
+@-webkit-keyframes zoomin { @include zoomin; }
+@-moz-keyframes zoomin { @include zoomin; }
+@-ms-keyframes zoomin { @include zoomin; }
+@-o-keyframes zoomin { @include zoomin; }
+@keyframes zoomin { @include zoomin; }
 
 
 /* Layout
@@ -26,7 +25,7 @@
 	position: relative;
 	z-index: 2;
 	border-bottom: 1px solid white;
-	background-color: @sidebarBg;
+	background-color: $sidebar-bg;
 
 	h1 {
 		display: table;
@@ -55,14 +54,14 @@
 			right: 70%;
 			top: 50%;
 			margin-top: -0.8em;
-			border-right-color: @darkBg;
+			border-right-color: $dark-bg;
 		}
 	}
 }
 
 #banner {
 	position: relative;
-	background: #fbd59a url(/images/wallpaper.jpg) no-repeat 50% 50%;
+	background: #F3AE92 url(/images/wallpaper.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	padding: 2em 0;
 	width: 100%;
@@ -71,12 +70,12 @@
 
 //no banner
 #masthead + #blog {
-	border-top: 1px solid @lightBorder;
+	border-top: 1px solid $light-border;
 	margin-top: -1px;
 	overflow: visible;
 
 	.post {
-		border-top: 1px solid @darkBg;
+		border-top: 1px solid $dark-bg;
 		margin-top: -1px;
 	}
 }
@@ -85,9 +84,9 @@
 	width: 32%;
 	position: absolute;
 	top: 1.5em;
-	.transform(translateZ(0));
-	.transition(margin, 0.2s, ease);
-	.animation(zoomin, 0.15s, ease-out, 0, 1, normal, backwards);
+	@include transform(translateZ(0));
+	@include transition(margin, 0.2s, ease);
+	@include animation(zoomin, 0.15s, ease-out, 0, 1, normal, backwards);
 }
 
 .chrome:last-of-type {
@@ -96,7 +95,7 @@
 	z-index: 101;
 	margin: 0 auto;
 	width: 40%;
-	.animation-delay(0.9s);
+	@include animation-delay(0.9s);
 
 	.slideshow {
 		height: 26em;
@@ -105,12 +104,12 @@
 
 .chrome:first-of-type {
 	left: 0;
-	.animation-delay(1.2s);
+	@include animation-delay(1.2s);
 }
 
 .chrome:nth-of-type(2) {
 	right: 0;
-	.animation-delay(1.5s);
+	@include animation-delay(1.5s);
 }
 
 
@@ -131,7 +130,7 @@ hr {
 	z-index: 2;
 	border-top: 1px solid white;
 	overflow: hidden;
-	background: @lightBg url(../images/faux-bg.gif) repeat-y 50% 0;
+	background: $light-bg url(../images/faux-bg.gif) repeat-y 50% 0;
 }
 
 article {
@@ -156,12 +155,12 @@ article {
 }
 
 .post {
-	background-color: @lightBg;
+	background-color: $light-bg;
 	padding: 1.5em 0 2em 2em;
 	float: right;
 	width: 70%;
 	min-height: 40em;
-	border-left: 1px solid @lightBorder;
+	border-left: 1px solid $light-border;
 
 	footer {
 		position: absolute;
@@ -171,15 +170,15 @@ article {
 		height: 100%;
 		padding: 1em 2em 2em 0;
 		text-align: right;
-		color: fadeout(@darkText, 30);
+		color: fade-out($dark-text, 0.3);
 
 		a {
 			display: inline-block;
 			text-decoration: none;
-			color: fadeout(@darkText, 60);
+			color: fade-out($dark-text, 0.6);
 
 			&:focus, &:hover {
-				color: fadeout(@darkText, 40);
+				color: fade-out($dark-text, 0.4);
 			}
 		}
 
@@ -196,11 +195,11 @@ article {
 			}
 
 			.tagged a {
-				color: fadeout(@darkText, 20);
+				color: fade-out($dark-text, 0.2);
 				border-color: rgba(0,0,0,0.15);
 
 				&:focus, &:hover {
-					color: @darkText;
+					color: $dark-text;
 					border-color: rgba(0,0,0,0.3);
 				}
 			}
@@ -274,8 +273,8 @@ article {
 			position: relative;
 			z-index: 2;
 			display: inline-block;
-			background-color: @darkBg;
-			box-shadow: 1em 0 0.5em 0.3em @darkBg;
+			background-color: $dark-bg;
+			box-shadow: 1em 0 0.5em 0.3em $dark-bg;
 			padding-right: 1em;
 		}
 

@@ -1,0 +1,15 @@
+$light-bg: #fcfcfc;
+$dark-bg: #3a3a3a;
+$mid-bg: #eee;
+$sidebar-bg: #f5f5f5;
+$dark-text: #222;
+$light-text: $light-bg;
+$light-border: rgba(0,0,0,0.12);
+
+$link-color:					#006c86;
+$link-color-visited:	darken($link-color, 15%);
+$link-color-hover:		desaturate(lighten($link-color, 10%), 10%);
+
+$serif-fonts: "Enriqueta", "Clarendon LT Standard", clarendon, georgia, "Times New Roman", times, serif;
+$sans-fonts: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+$mono-fonts: menlo, monaco, consolas, "Lucida Console", courier, monospace;
