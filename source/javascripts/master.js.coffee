@@ -32,11 +32,11 @@ class Chrome
   addToolbar: ($chrome, id, url, permalink, external) ->
     t = '<form class="toolbar" method="get">'+
     '<div class="button-group left">'+
-    ' <a class="prev" href="#prev">Previous</a>'+
-    ' <a class="next" href="#next">Next</a>'+
+    ' <a data-icon="navigateleft" class="prev" href="#prev">Previous</a>'+
+    ' <a data-icon="navigateright" class="next" href="#next">Next</a>'+
     '</div>'+
     '<div class="button-group right">'+
-    ' <a data-icon="redirect" class="info" href="'+permalink+'"'
+    ' <a data-icon="expand" class="info" href="'+permalink+'"'
 
     t += ' target="_blank"' if external
 
