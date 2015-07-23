@@ -1,4 +1,4 @@
 samrayner.github.io
 ===================
 
-My blog
+Generate a new blog post with `rake 'post[Title]'`
