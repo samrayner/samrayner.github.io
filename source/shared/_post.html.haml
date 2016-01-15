@@ -34,6 +34,7 @@
       .comments
         %h1{ "data-icon" => "comment" } Comments?
         %p
-          = mail_to percent_obfuscate(data.me.email), entity_obfuscate(data.me.email), class: "email"
+          %a.email{ href: "mailto:#{percent_obfuscate(data.me.email)}" }
+            entity_obfuscate(data.me.email)
           or tweet
           = link_to "@#{data.me.twitter}", "http://twitter.com/#{data.me.twitter}"
