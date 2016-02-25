@@ -1,4 +1,4 @@
-article#alfred-sprintly a[href*=alfredworkflow] {
+article#alfred-sprintly a[href$=latest] {
   box-shadow: inset 0px 20px 20px rgba(255,255,255,0.2);
   border: 1px solid rgba(0,0,0,0.3);
   border-bottom-width: 2px;
@@ -17,12 +17,12 @@ article#alfred-sprintly a[href*=alfredworkflow] {
   font-size: 1.2em;
 }
 
-article#alfred-sprintly a[href*=alfredworkflow]:hover,
-article#alfred-sprintly a[href*=alfredworkflow]:focus {
+article#alfred-sprintly a[href$=latest]:hover,
+article#alfred-sprintly a[href$=latest]:focus {
   background-color: #268393;
 }
 
-article#alfred-sprintly a[href*=alfredworkflow]:active {
+article#alfred-sprintly a[href$=latest]:active {
   box-shadow: inset 0px 20px 20px rgba(0,0,0,0.1);
   border-bottom-width: 1px;
   border-top-width: 2px;
